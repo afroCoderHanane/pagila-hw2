@@ -9,3 +9,4 @@
  * HINT:
  * This can be solved using either a LEFT JOIN or the NOT IN operator.
  */
+select actor.last_name, actor.first_name from actor left join customer using(last_name, first_name) where (last_name, first_name) NOT IN (select last_name, first_name from customer)order by last_name, first_name ;
